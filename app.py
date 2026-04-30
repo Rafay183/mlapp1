@@ -25,5 +25,5 @@ if st.button("Prediction Price"):
     input_data=[[encoded_model,mileage,age]]
     predicted_price=reg.predict(input_data)
     pred_pric= predicted_price[0]
-    st.success(f"Estimated Selling Price: {"$", pred_pric.round(2)}")
+    st.success(f"Estimated Selling Price: {pred_pric}")
 
