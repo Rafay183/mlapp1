@@ -24,5 +24,6 @@ encoded_model = le.transform([car_model])[0]
 if st.button("Prediction Price"):
     input_data=[[encoded_model,mileage,age]]
     predicted_price=reg.predict(input_data)
-    st.success(f"Estimated Selling Price: {predicted_price[0]}")
+    pred_pric= predicted_price[0]
+    st.success(f"Estimated Selling Price: {"$", pred_pric.round(2)}")
 
